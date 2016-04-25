@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 334762 $ -->
+<!-- EN-Revision: 334762 Maintainer: none Status: ready -->
 <section xml:id="intl.collator-constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
  <para>
@@ -11,13 +11,12 @@
     </term>
     <listitem>
      <para>
-      Sort strings with different accents from the back of the string. This
-      attribute is automatically set to
-      <emphasis>On</emphasis>
-      for the French locales and a few others. Users normally would not need
-      to explicitly set this attribute. There is a string comparison
-      performance cost when it is set <emphasis>On</emphasis>,
-      but sort key length is unaffected. Possible values are:
+      Ordena strings baseado na toniciade da palavra, iniciando do fim da string. Esse
+      atributo está automaticamente definido como
+      <emphasis>On</emphasis> (ativo)
+      para as localidades francesas (e algumas outras). Há um custo de performance
+      na comparação das strings quando esta opção está <emphasis>On</emphasis> (ativa),
+      mas a chave de ordenação não é afetada. Os valores possíveis são:
       <simplelist>
        <member><constant>Collator::ON</constant></member>
        <member><constant>Collator::OFF</constant>(default)</member>
@@ -26,7 +25,7 @@
      </para>
      <para>
       <example>
-       <title>FRENCH_COLLATION rules</title>
+       <title>Regras da FRENCH_COLLATION</title>
        <para>
         <simplelist>
          <member>F=OFF cote &lt; coté &lt; côte &lt; côté </member>
@@ -45,22 +44,25 @@
     </term>
     <listitem>
      <para>
-      The Alternate attribute is used to control the handling of the so called
-      variable characters in the UCA: whitespace, punctuation and symbols. If
-      Alternate is set to <emphasis>NonIgnorable</emphasis>
-      (N), then differences among these characters are of the same importance
-      as differences among letters. If Alternate is set to
+      O atributo "Alternate" é utilizado para controlar a manipulação dos chamados
+      caracteres variáveis na UCA: espaço em branco, pontuação e símbolos. Se
+      o atributo estiver definico como <emphasis>NonIgnorable</emphasis>
+      (N), então as diferenças entre esses caracteres são de importância equivalente
+      às das letras normais. Se o atributo estiver definido como
       <emphasis>Shifted</emphasis>
-      (S), then these characters are of only minor importance. The
-      <emphasis>Shifted</emphasis> value is often used in combination with
-      <emphasis>Strength</emphasis>
-      set to Quaternary. In such a case, whitespace, punctuation, and symbols
-      are considered when comparing strings, but only if all other aspects of
-      the strings (base letters, accents, and case) are identical. If
-      Alternate is not set to Shifted, then there is no difference between a
-      Strength of 3 and a Strength of 4. For more information and examples,
-      see Variable_Weighting in the
+      (S), então esses caracteres são de menor importância. O valor
+      <emphasis>Shifted</emphasis> é usado geralmente em combinação com
+      o atributo <emphasis>Strength</emphasis>
+      definido para "Quaternary". Nesse caso, espaços em branco, pontuação e símbolos
+      são considerados na comparação de strings, mas apenas se todos os outros aspectos
+      das strings (letras, acentos e caso) forem idênticos. Se
+      o atributo "Alternate" não estifer definido como "Shifted", então não há diferença entre uma
+      string com "Strength" 3 ou 4. Para mais informações e exemplos,
+      consulte Variable_Weighting na
       <link xlink:href="&url.icu.uca;">UCA</link>.
+      O motivo pelo qual os valores do atributo "Alternate" não serem simplesmente
+      <emphasis>On</emphasis> and <emphasis>Off</emphasis>
+
       The reason the Alternate values are not simply
       <emphasis>On</emphasis> and <emphasis>Off</emphasis>
       is that additional Alternate values may be added in the future. The UCA
@@ -85,10 +87,10 @@
         <simplelist>
          <member>
          S=3, A=N di Silva &lt; Di Silva &lt; diSilva &lt; U.S.A. &lt; USA
-         </member> 
+         </member>
          <member>
          S=3, A=S di Silva = diSilva &lt; Di Silva &lt; U.S.A. = USA
-         </member> 
+         </member>
          <member>
          S=4, A=S di Silva &lt; diSilva &lt; Di Silva &lt; U.S.A. &lt; USA
          </member>
@@ -134,7 +136,7 @@
        <title>CASE_FIRST rules</title>
        <para>
         <simplelist>
-         <member>C=X or C=L "china" &lt; "China" &lt; "denmark" &lt; "Denmark"</member> 
+         <member>C=X or C=L "china" &lt; "China" &lt; "denmark" &lt; "Denmark"</member>
          <member>C=U "China" &lt; "china" &lt; "Denmark" &lt; "denmark"</member>
         </simplelist>
        </para>
@@ -170,7 +172,7 @@
        <title>CASE_LEVEL rules</title>
        <para>
         <simplelist>
-         <member>S=1, E=X role = Role = rôle</member> 
+         <member>S=1, E=X role = Role = rôle</member>
          <member>S=1, E=O role = rôle &lt; Role</member>
         </simplelist>
        </para>

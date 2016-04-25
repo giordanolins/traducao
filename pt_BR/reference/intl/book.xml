@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 338548 $ -->
+<!-- EN-Revision: 338548 Maintainer: none Status: ready -->
 
 <book xml:id="book.intl" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <?phpdoc extension-membership="bundled" ?>
- <title>Internationalization Functions</title>
+ <title>Funções de Internacionalização</title>
  <titleabbrev>intl</titleabbrev>
 
  <!-- {{{ Preface -->
  <preface xml:id="intro.intl">
   &reftitle.intro;
   <para>
-   Internationalization extension (further is referred as Intl) is a wrapper
-   for <link xlink:href="&url.icu.home;">ICU</link>
-   library, enabling PHP programmers to perform various locale-aware operations including
-   but not limited to formatting, transliteration, encoding conversion, calendar operations,
-   <link xlink:href="&url.icu.uca;">UCA</link>-conformant collation, locating
-   text boundaries and working with locale identifiers, timezones and graphemes,
+   A extensão de internacionalização (referida posteriormente como Intl) é um wrapper
+   para a biblioteca <link xlink:href="&url.icu.home;">ICU</link>.
+   Ela permite que os desenvolvedores PHP possam realizar diversas operações independentes de cultura, incluindo,
+   mas não limitado somente a, formatação, transliteração, conversão de codificação, operações com calendários,
+   compilações compatíveis com a <link xlink:href="&url.icu.uca;">UCA</link>, localização
+   de limites de texto e trabalhar com identificadores de localização, fusos horários e grafemas.
   </para>
 
   <para>
-   It tends to closely follow ICU APIs, so that people having experience
-   working with ICU in either C/C++ or Java could easily use the PHP API.
-   Also, this way ICU documentation would be useful to understand various ICU
-   functions.
+   A extensão tende a seguir os padrões das APIs da biblioteca ICU. Desta forma, pessoas que
+   já trabalharam com a ICU tanto em C/C++ quanto em Java podem facilmente usar a API PHP.
+   Além disso, a documentação da ICU pode ser útil para compreender várias
+   funções ICU.
   </para>
 
   <para>
-   Intl consists of several modules, each of them exposes the corresponding
-   ICU API:
+   A extensão Intl consiste de vários módulos, onde cada um deles expõe a API
+   ICU correspondente:
   </para>
 
   <itemizedlist>
    <listitem>
     <simpara>
-     Collator: provides string comparison capability with support for
-     appropriate locale-sensitive sort orderings.
+     Collator: provê a capacidade de realizar comparação de strings com suporte a
+     ordenação baseada na localidade.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Number Formatter: allows to display number according to the localized
-     format or given pattern or set of rules, and to parse strings into
-     numbers.
+     Number Formatter: permite a exibição de números de acordo com o formato
+     dado (baseado na localidade) ou um dado padrão ou conjunto de regras, e também a
+     conversão de strings em números.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Message Formatter: allows to create messages incorporating data (such
-     as numbers or dates) formatted according to given pattern and locale
-     rules, and parse messages extracting data from them. It can handle plurals,
-     locale-aware numbers, currencies, conditions and much more.
+     Message Formatter: permite a criação de mensagens incorporando dados (como
+     números e datas) formatados de acordo com um dado padrão e regras de
+     localidade, e a análise de messagens extraindo dados a partir delas. Pode-se também
+     lidar com plurais, números localizados, moedas, condições e muito mais.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Normalizer: provides a function to transform text into one of the Unicode
-     normalization forms, and provides a routine to test if a given string is
-     already normalized.
+     Normalizer: provê uma função para transformar texto em uma das formas de
+     normalização Unicode. Provê também uma rotina para verificar se uma dada string
+     já está normalizada.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Locale: provides interaction with locale identifiers in the form of
-     functions to get subtags from locale identifier; parse, compose,
-     match(lookup and filter) locale identifiers.
+     Locale: provê interação com identificadores de localidade na forma de
+     funções para obter subtags a partir dos mesmos; processar, compor,
+     comparar (consultar e filtrar) indentificadores de localização.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Calendar: provides a class which could be used for locale-aware calendar operations
-     and getting various information such as timezone for locale chosen, first day of week
-     or if it's daylight saving time now.
+     Calendar: provê uma classe que pode ser usada para operações de calendário de acordo com
+     a localização, e obter várias informações como o fuso horário de uma determinada localização,
+     primeiro dia da semana ou se a mesma está em horário de verão no momento.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Timezone: provides a wrapper around Olson database
-     which has information about all the timezones around the world.
+     Timezone: provê um wrapper para o banco de dados Olson
+     que contém informações sobre todos os fusos horários do mundo.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Date formatter: allows to display date and time according to the localized
-     format or given pattern or set of rules, and to parse strings into
-     date and time.
+     Date formatter: permite a exibição de data e hora de acordo com o formato
+     dado (localizado), ou um dado padrão ou um conjunto de regras, e também a
+     conversão de strings em data e hora.
     </simpara>
    </listitem>
    <listitem>
     <simpara>
-     Transliterator: allows getting latin representation of strings in various languages.
+     Transliterator: permite a obtenção da representação latina de strings em vários idiomas.
     </simpara>
    </listitem>
   </itemizedlist>
@@ -98,13 +98,13 @@
    <title>Links</title>
    <itemizedlist>
     <listitem>
-     <para><link xlink:href="&url.icu.docs;">Miscellaneous ICU docs</link></para>
+     <para><link xlink:href="&url.icu.docs;">Documentos diversos sobre ICU</link></para>
     </listitem>
     <listitem>
-     <para><link xlink:href="&url.icu.userguide;">ICU User Guide</link></para>
+     <para><link xlink:href="&url.icu.userguide;">Guia do usuário ICU</link></para>
     </listitem>
     <listitem>
-     <para><link xlink:href="&url.icu.uca;">Unicode Collation Algorithm</link></para>
+     <para><link xlink:href="&url.icu.uca;">Algorítimo de Colação Unicode</link></para>
     </listitem>
    </itemizedlist>
   </section>
