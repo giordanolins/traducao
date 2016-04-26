@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 323624 $ -->
+<!-- EN-Revision: 323624 Maintainer: none Status: ready -->
 <appendix xml:id="intl.constants" xmlns="http://docbook.org/ns/docbook"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
@@ -12,8 +12,8 @@
     </term>
     <listitem>
      <simpara>
-      Limit on locale length, set to 80 in PHP code. Locale names longer 
-      than this limit will not be accepted.
+      Limita o comprimento no nome da localidade, definido como 80 no código PHP.
+      Nomes de localidade maiores que esse limite não são aceitos.
      </simpara>
     </listitem>
    </varlistentry>
@@ -24,8 +24,8 @@
     </term>
     <listitem>
      <simpara>
-      Prohibit processing of unassigned codepoints in the input for IDN
-      functions and do not check if the input conforms to domain name ASCII rules.
+      Proíbe o processamento de codepoints não atribuídos na entrada de funções IDN
+      e não verifica se a entrada está em conformidade com as regras de nome de domínio ASCII.
      </simpara>
     </listitem>
    </varlistentry>
@@ -36,7 +36,7 @@
     </term>
     <listitem>
      <simpara>
-      Allow processing of unassigned codepoints in the input for IDN functions.
+      Permite o processamento de codepoints não atribuídos na entrada de funções IDN.
      </simpara>
     </listitem>
    </varlistentry>
@@ -47,7 +47,7 @@
     </term>
     <listitem>
      <simpara>
-      Check if the input for IDN functions conforms to domain name ASCII rules.
+      Verifica se a entrada para as funções IDN está em conformidade com as regras de nome de domínio ASCII.
      </simpara>
     </listitem>
    </varlistentry>
@@ -58,8 +58,8 @@
     </term>
     <listitem>
      <simpara>
-      Check whether the input conforms to the BiDi rules.
-      Ignored by the IDNA2003 implementation, which always performs this check.
+      Verifica se a entrada está em conformidade com as regras BiDi.
+      Ignorado pela implementação IDNA2003, que sempre realiza esta verificação.
      </simpara>
     </listitem>
    </varlistentry>
@@ -70,8 +70,8 @@
     </term>
     <listitem>
      <simpara>
-      Check whether the input conforms to the CONTEXTJ rules.
-      Ignored by the IDNA2003 implementation, as this check is new in IDNA2008.
+      Verifica se a entrada está em conformidade com as regras CONTEXTJ.
+      Ignorado pela implementação IDNA2003, pois essa verificação é nova na IDNA2008.
      </simpara>
     </listitem>
    </varlistentry>
@@ -82,9 +82,9 @@
     </term>
     <listitem>
      <simpara>
-      Option for nontransitional processing in
-      <function>idn_to_ascii</function>. Transitional processing is activated
-      by default. This option is ignored by the IDNA2003 implementation.
+      Opção para o processamento não transacional na função
+      <function>idn_to_ascii</function>. O processamento transacional está ativado
+      por padrão. Esta opção é ignorada pela implementação IDNA2003.
      </simpara>
     </listitem>
    </varlistentry>
@@ -95,9 +95,9 @@
     </term>
     <listitem>
      <simpara>
-      Option for nontransitional processing in
-      <function>idn_to_utf8</function>. Transitional processing is activated
-      by default. This option is ignored by the IDNA2003 implementation.
+      Opção para o processamento não transacional na função
+      <function>idn_to_utf8</function>. O processamento transacional está ativado
+      por padrão. Esta opção é ignorada pela implementação IDNA2003.
      </simpara>
     </listitem>
    </varlistentry>
@@ -108,8 +108,8 @@
     </term>
     <listitem>
      <simpara>
-      Use IDNA 2003 algorithm in <function>idn_to_utf8</function> and
-      <function>idn_to_ascii</function>. This is the default.
+      Utiliza o algorítmo IDNA 2003 nas funções <function>idn_to_utf8</function> e
+      <function>idn_to_ascii</function>. Esse é o comportamento padrão.
      </simpara>
     </listitem>
    </varlistentry>
@@ -120,7 +120,7 @@
     </term>
     <listitem>
      <simpara>
-      Use UTS #46 algorithm in <function>idn_to_utf8</function> and
+      Utiliza o algorítmo UTS #46 nas funções <function>idn_to_utf8</function> e
       <function>idn_to_ascii</function>.
      </simpara>
     </listitem>
@@ -168,8 +168,8 @@
     </term>
     <listitem>
      <simpara>
-      Errors reported in a bitset returned by the UTS #46 algorithm in
-      <function>idn_to_utf8</function> and
+      Erros reportados em um bitset retornado pelo algorítmo UTS #46 nas
+      funções <function>idn_to_utf8</function> e
       <function>idn_to_ascii</function>.
      </simpara>
     </listitem>

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 304877 $ -->
+<!-- EN-Revision: 304877 Maintainer: none Status: ready -->
 <section xml:id="intl.installation" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.install;
  <para>
-  This extension may be installed using the bundled version as of PHP 5.3.0,
-  or as a PECL extension as of PHP 5.2.0. In other words, there are two methods
-  to install the intl extension.
+  Esta extensão deve ser instalada utilizando-se a versão embutida para o PHP 5.3.0,
+  ou como uma extensão PECL para o PHP 5.2.0. Em outras palavras, há dois métodos
+  para a instalação da extensão intl.
  </para>
  <para>
   &pecl.info;
   <link xlink:href="&url.pecl.package;intl">&url.pecl.package;intl</link>.
  </para>
  <para>
-  Alternatively, <literal>--enable-intl</literal> will enable the bundled
-  version while compiling PHP.
+  Alternativamente, o parâmetro <literal>--enable-intl</literal> habilitará a
+  versão embutida quando for compilar o PHP.
  </para>
  <para>
-  If your ICU is installed to a non-standard directory then you might want to
-  specify its location in
+  Se o ICU estiver instalado em um diretório não padrão, então é desejável
+  especificar sua localização na variável de ambiente
   <constant>LD_LIBRARY_PATH</constant>
-  environment variable so that dynamic linker can find it:
+  para que o linker possa encontrá-lo:
  </para>
  <screen>$ export LD_LIBRARY_PATH=/opt/icu/lib</screen>
  <para>
-  Otherwise, if PHP and ICU are installed to their default locations, then the
-  additional options to `configure' are not needed.
+  Caso contrário, se o PHP e o ICU estiverem instalados em seus locais padrão, então as
+  opções adicionais para o comando 'configure' não são necessárias.
  </para>
 </section>
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 330617 $ -->
+<!-- EN-Revision: 330617 Maintainer: none Status: ready -->
 <para xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- One of the <classname>IntlCalendar</classname> date/time <link
- linkend="intlcalendar.constants">field constants</link>. These are integer
- values between <literal>0</literal> and
+ Uma das <link linkend="intlcalendar.constants">constantes</link> de data/hora
+ da classe <classname>IntlCalendar</classname>. São valores inteiros
+ entre <literal>0</literal> e
  <constant>IntlCalendar::FIELD_COUNT</constant>.
 </para>

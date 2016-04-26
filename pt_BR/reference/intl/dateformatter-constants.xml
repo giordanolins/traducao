@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 323624 $ -->
+<!-- EN-Revision: 323624 Maintainer: none Status: ready -->
 <section xml:id="intl.intldateformatter-constants" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.constants;
 
  <para>
-  These constants are used to specify different formats
-  in the constructor for DateType and TimeType.
+  Estas constantes são utilizadas para especificar diferentes formatos
+  nos construtores das classes DateType e TimeType.
   <variablelist>
    <varlistentry xml:id="intldateformatter.constants.none">
     <term>
@@ -13,7 +13,7 @@
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Do not include this element</simpara>
+     <simpara>Não incluir o elemento</simpara>
     </listitem>
    </varlistentry>
    <varlistentry xml:id="intldateformatter.constants.full">
@@ -22,7 +22,7 @@
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Completely specified style (Tuesday, April 12, 1952 AD or 3:30:42pm PST)</simpara>
+     <simpara>Estilo especificado por completo (Tuesday, April 12, 1952 AD ou 3:30:42pm PST)</simpara>
     </listitem>
    </varlistentry>
    <varlistentry xml:id="intldateformatter.constants.long">
@@ -31,7 +31,7 @@
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Long style (January 12, 1952 or 3:30:32pm)</simpara>
+     <simpara>Estilo longo (January 12, 1952 ou 3:30:32pm)</simpara>
     </listitem>
    </varlistentry>
    <varlistentry xml:id="intldateformatter.constants.medium">
@@ -40,7 +40,7 @@
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Medium style (Jan 12, 1952)</simpara>
+     <simpara>Estilo médio (Jan 12, 1952)</simpara>
     </listitem>
    </varlistentry>
    <varlistentry xml:id="intldateformatter.constants.short">
@@ -49,25 +49,25 @@
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Most abbreviated style, only essential data (12/13/52 or 3:30pm)</simpara>
+     <simpara>O estilo mais abreviado, apenas o dado essencial (12/13/52 ou 3:30pm)</simpara>
     </listitem>
    </varlistentry>
   </variablelist>
  </para>
 
  <para xml:id="intl.intldateformatter-constants.calendartypes">
-  The following int constants are used to specify the calendar. 
-  These calendars are all based directly on the Gregorian calendar.
-  Non-Gregorian calendars need to be specified in locale. 
-  Examples might include locale="hi@calendar=BUDDHIST".
-  <variablelist>    
+  As seguintes constantes inteiras são utilizadas para especificar o calendário.
+  Esses calendários são todos baseados diretamente no calendário Gregoriano.
+  Calendários não Gregorianos precisam ser especificados na localidade.
+  Por exemplo, locale="hi@calendar=BUDDHIST".
+  <variablelist>
    <varlistentry xml:id="intldateformatter.constants.traditional">
     <term>
      <constant>IntlDateFormatter::TRADITIONAL</constant>
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Non-Gregorian Calendar</simpara>
+     <simpara>Calendário Não Gregoriano</simpara>
     </listitem>
    </varlistentry>
    <varlistentry xml:id="intldateformatter.constants.gregorian">
@@ -76,7 +76,7 @@
      (<type>integer</type>)
     </term>
     <listitem>
-     <simpara>Gregorian Calendar</simpara>
+     <simpara>Calendário Gregoriano</simpara>
     </listitem>
    </varlistentry>
   </variablelist>
@@ -102,5 +102,4 @@ End:
 vim600: syn=xml fen fdm=syntax fdl=2 si
 vim: et tw=78 syn=sgml
 vi: ts=1 sw=1
---> 
- 
+-->

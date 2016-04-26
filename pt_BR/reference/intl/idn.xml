@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 317663 $ -->
+<!-- EN-Revision: 317663 Maintainer: none Status: ready -->
 <reference xml:id="ref.intl.idn" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
- <title>IDN &Functions;</title>
+ <title>&Functions; IDN</title>
  &reference.intl.entities.idn;
 </reference>
 

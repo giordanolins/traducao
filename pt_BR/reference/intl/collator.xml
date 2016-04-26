@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 292734 $ -->
+<!-- EN-Revision: 292734 Maintainer: none Status: ready -->
 
 <phpdoc:classref xmlns:phpdoc="http://php.net/ns/phpdoc" xml:id="class.collator" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
- <title>The Collator class</title>
+ <title>A classe Collator</title>
  <titleabbrev>Collator</titleabbrev>
 
  <partintro>
@@ -11,8 +11,8 @@
   <section xml:id="collator.intro">
    &reftitle.intro;
    <para>
-    Provides string comparison capability with support for appropriate
-    locale-sensitive sort orderings.
+    Provê a capacidade de comparação entre strings com suporte à ordenação
+    apropriada baseada na localidade.
    </para>
   </section>
   <!-- }}} -->
@@ -41,7 +41,7 @@
      <type>string</type>
      <varname linkend="collator.props.name">name</varname>
      </fieldsynopsis>
-     
+
      <xi:include xpointer="xmlns(db=http://docbook.org/ns/docbook) xpointer(id('class.collator')/db:refentry/db:refsect1[@role='description']/descendant::db:fieldsynopsis[1])" />
     -->
 

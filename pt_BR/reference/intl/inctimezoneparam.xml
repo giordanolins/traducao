@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 330617 $ -->
+<!-- EN-Revision: 330617 Maintainer: none Status: ready -->
 <itemizedlist xmlns="http://docbook.org/ns/docbook"
 xmlns:xlink="http://www.w3.org/1999/xlink">
  <listitem>
   <para>
-   &null;, in which case the default timezone will be used, as specified in
-   the ini setting <link linkend="ini.date.timezone">date.timezone</link> or
-   through the function <function>date_default_timezone_set</function> and as
-   returned by <function>date_default_timezone_get</function>.
+   &null;, no caso em que o fuso horário padrão será usado, como especificado na
+   configuração de inicialização <link linkend="ini.date.timezone">date.timezone</link> ou
+   através da função <function>date_default_timezone_set</function> e como
+   retornado pela função <function>date_default_timezone_get</function>.
   </para>
  </listitem>
  <listitem>
   <para>
-   An <classname>IntlTimeZone</classname>, which will be used directly.
+   Um objeto <classname>IntlTimeZone</classname>, que será utilizado diretamente.
   </para>
  </listitem>
  <listitem>
   <para>
-   A <classname>DateTimeZone</classname>. Its identifier will be extracted
-   and an ICU timezone object will be created; the timezone will be backed
-   by ICUʼs database, not PHPʼs.
+   Um objeto <classname>DateTimeZone</classname>. O identificador será extraído
+   e um objeto de fuso horário ICU será criado; o fuso horário será provido
+   pelo banco de dados da ICUʼs e não pelo do PHP.
   </para>
  </listitem>
  <listitem>
   <para>
-   A <type>string</type>, which should be a valid ICU timezone identifier.
-   See <function>IntlTimeZone::createTimeZoneIDEnumeration</function>. Raw
-   offsets such as <literal>"GMT+08:30"</literal> are also accepted.
+   Uma <type>string</type>, que deve ser um identificador de fuso horário ICU válido.
+   Consulte <function>IntlTimeZone::createTimeZoneIDEnumeration</function>. Deslocamentos
+   como <literal>"GMT+08:30"</literal> também são aceitos.
   </para>
  </listitem>
 </itemizedlist>

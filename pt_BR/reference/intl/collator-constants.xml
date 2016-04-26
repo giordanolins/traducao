@@ -11,7 +11,7 @@
     </term>
     <listitem>
      <para>
-      Ordena strings baseado na toniciade da palavra, iniciando do fim da string. Esse
+      Ordena strings baseado na toniciade da palavra, iniciando pelo fim da string. Esse
       atributo está automaticamente definido como
       <emphasis>On</emphasis> (ativo)
       para as localidades francesas (e algumas outras). Há um custo de performance
@@ -19,13 +19,13 @@
       mas a chave de ordenação não é afetada. Os valores possíveis são:
       <simplelist>
        <member><constant>Collator::ON</constant></member>
-       <member><constant>Collator::OFF</constant>(default)</member>
+       <member><constant>Collator::OFF</constant>(padrão)</member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
       </simplelist>
      </para>
      <para>
       <example>
-       <title>Regras da FRENCH_COLLATION</title>
+       <title>Regras de FRENCH_COLLATION</title>
        <para>
         <simplelist>
          <member>F=OFF cote &lt; coté &lt; côte &lt; côté </member>
@@ -46,9 +46,9 @@
      <para>
       O atributo "Alternate" é utilizado para controlar a manipulação dos chamados
       caracteres variáveis na UCA: espaço em branco, pontuação e símbolos. Se
-      o atributo estiver definico como <emphasis>NonIgnorable</emphasis>
+      o atributo estiver definido como <emphasis>NonIgnorable</emphasis>
       (N), então as diferenças entre esses caracteres são de importância equivalente
-      às das letras normais. Se o atributo estiver definido como
+      aos caracteres alfabéticos. Se o atributo estiver definido como
       <emphasis>Shifted</emphasis>
       (S), então esses caracteres são de menor importância. O valor
       <emphasis>Shifted</emphasis> é usado geralmente em combinação com
@@ -56,33 +56,30 @@
       definido para "Quaternary". Nesse caso, espaços em branco, pontuação e símbolos
       são considerados na comparação de strings, mas apenas se todos os outros aspectos
       das strings (letras, acentos e caso) forem idênticos. Se
-      o atributo "Alternate" não estifer definido como "Shifted", então não há diferença entre uma
+      o atributo "Alternate" não estiver definido como "Shifted", então não há diferença entre uma
       string com "Strength" 3 ou 4. Para mais informações e exemplos,
-      consulte Variable_Weighting na
+      consulte Variable_Weighting no
       <link xlink:href="&url.icu.uca;">UCA</link>.
       O motivo pelo qual os valores do atributo "Alternate" não serem simplesmente
-      <emphasis>On</emphasis> and <emphasis>Off</emphasis>
-
-      The reason the Alternate values are not simply
-      <emphasis>On</emphasis> and <emphasis>Off</emphasis>
-      is that additional Alternate values may be added in the future. The UCA
-      option Blanked is expressed with Strength set to 3, and Alternate set to
-      Shifted. The default for most locales is NonIgnorable. If Shifted is
-      selected, it may be slower if there are many strings that are the same
-      except for punctuation; sort key length will not be affected unless the
-      strength level is also increased.
+      <emphasis>On</emphasis> e <emphasis>Off</emphasis>
+      é que valores adicionais podem ser adicionados no futuro para o atributo "Alternate". A opção
+      "Blanked" do UCA é expressada com o atributo "Strength" definido para 3, e "Alternate" definido para
+      "Shifted". O padrão para a maioria das localidades é "NonIgnorable". Se o valor "Shifted" for
+      selecionado, ele pode ser mais lento se houver muitas strings idênticas,
+      exceto pela pontuação; o comprimento da chave de ordenação não será afetado a menos que o
+      nível de força (strength) também seja aumentado.
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
-       <member><constant>Collator::NON_IGNORABLE</constant>(default)</member>
+       <member><constant>Collator::NON_IGNORABLE</constant>(padrão)</member>
        <member><constant>Collator::SHIFTED</constant></member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
       </simplelist>
      </para>
      <para>
       <example>
-       <title>ALTERNATE_HANDLING rules</title>
+       <title>Regras de ALTERNATE_HANDLING</title>
        <para>
         <simplelist>
          <member>
@@ -108,24 +105,24 @@
     </term>
     <listitem>
      <para>
-      The Case_First attribute is used to control whether uppercase letters
-      come before lowercase letters or vice versa, in the absence of other
-      differences in the strings. The possible values are
+      O atributo "Case_First" é utilizado para controlar se as letras maiúsculas
+      tem precedência às letras minúsculas ou vice-versa, na ausência de outras
+      diferenças nas strings. Os valores possíveis são
       <emphasis>Uppercase_First</emphasis>
-      (U) and <emphasis>Lowercase_First</emphasis>
-      (L), plus the standard <emphasis>Default</emphasis>
-      and <emphasis>Off</emphasis>.
-      There is almost no difference between the Off and Lowercase_First
-      options in terms of results, so typically users will not use
-      Lowercase_First: only Off or Uppercase_First. (People interested in the
-      detailed differences between X and L should consult the <literal>Collation
-      Customization</literal>). Specifying either L or U won't affect string comparison
-      performance, but will affect the sort key length.
+      (U) e <emphasis>Lowercase_First</emphasis>
+      (L), além do valor padrão <emphasis>Default</emphasis>
+      e <emphasis>Off</emphasis>.
+      Quase não há diferença entre as opções "Off" e "Lowercase_First"
+      em termos de resultados, então tipicamente os usuários não utilizarão
+      Lowercase_First: apenas "Off" ou "Uppercase_First". (Os interessados no
+      datalhamento da diferença entre X e L devem consultar a <literal>Collation
+      Customization</literal>). Especificar L ou U não afeta a performance da comparação
+      de strings, mas afeta o comprimento da chave de ordenação.
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
-       <member><constant>Collator::OFF</constant>(default)</member>
+       <member><constant>Collator::OFF</constant>(padrão)</member>
        <member><constant>Collator::LOWER_FIRST</constant></member>
        <member><constant>Collator::UPPER_FIRST</constant></member>
        <member><constant>Collator:DEFAULT</constant></member>
@@ -133,10 +130,10 @@
      </para>
      <para>
       <example>
-       <title>CASE_FIRST rules</title>
+       <title>Regras de CASE_FIRST</title>
        <para>
         <simplelist>
-         <member>C=X or C=L "china" &lt; "China" &lt; "denmark" &lt; "Denmark"</member>
+         <member>C=X ou C=L "china" &lt; "China" &lt; "denmark" &lt; "Denmark"</member>
          <member>C=U "China" &lt; "china" &lt; "Denmark" &lt; "denmark"</member>
         </simplelist>
        </para>
@@ -152,24 +149,24 @@
     </term>
     <listitem>
      <para>
-      The Case_Level attribute is used when ignoring accents but not case. In
-      such a situation, set Strength to be <emphasis>Primary</emphasis>,
-      and Case_Level to be <emphasis>On</emphasis>.
-      In most locales, this setting is Off by default. There is a small
-      string comparison performance and sort key impact if this attribute is
-      set to be <emphasis>On</emphasis>.
+      O atributo Case_Level é usado para ignorar a tonicidade mas não o caso. Nessas
+      situações, define-se o atributo "Strength" como <emphasis>Primary</emphasis>,
+      e o atributo "Case_Level" para <emphasis>On</emphasis>.
+      Na maioria das localidades, essa configuração é "Off" (desativada) por padrão. Há um pequeno
+      impacto na performance da comparação de strings e chave de ordenação caso esse atributo esteja
+      definido como <emphasis>On</emphasis> (ativo).
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
-       <member><constant>Collator::OFF</constant>(default)</member>
+       <member><constant>Collator::OFF</constant>(padrão)</member>
        <member><constant>Collator::ON</constant></member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
       </simplelist>
      </para>
      <para>
       <example>
-       <title>CASE_LEVEL rules</title>
+       <title>Regras de CASE_LEVEL</title>
        <para>
         <simplelist>
          <member>S=1, E=X role = Role = rôle</member>
@@ -188,24 +185,24 @@
     </term>
     <listitem>
      <para>
-      The Normalization setting determines whether text is thoroughly
-      normalized or not in comparison. Even if the setting is off (which is
-      the default for many locales), text as represented in common usage will
-      compare correctly (for details, see UTN #5). Only if the accent marks
-      are in noncanonical order will there be a problem. If the setting is
-      <emphasis>On</emphasis>,
-      then the best results are guaranteed for all possible text input.
-      There is a medium string comparison performance cost if this attribute
-      is <emphasis>On</emphasis>,
-      depending on the frequency of sequences that require normalization.
-      There is no significant effect on sort key length. If the input text is
-      known to be in NFD or NFKD normalization forms, there is no need to
-      enable this Normalization option.
+      A configuração de normalização determina se o texto será normalizado
+      por inteiro ou não, no ato da comparação. Mesmo que a configuração esteja desativada (o que é
+      o padrão para a maioria das localidades), o texto representado como no uso comum será
+      comparado corretamente (para detalhes veja a UTN #5). Somente se as marcações de tonicidade
+      estiverem em ordem não canônica é que haverão problemas. Se a configuração estiver
+      <emphasis>On</emphasis> (ativa),
+      então os melhores resultados são garantidos para todas as entradas possíveis de texto.
+      Há um custo médio de performance na comparação de strings se este atributo
+      estiver definido como <emphasis>On</emphasis>,
+      dependendo da frequência das sequências que requerem normalização.
+      Não há efeitos significantes no comprimento da chave de ordenação. Se o texto de entrada estiver
+      nas formas NFD ou NFKD de normalização, não há necessidade de
+      ativar essa opção de normalização.
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
-       <member><constant>Collator::OFF</constant>(default)</member>
+       <member><constant>Collator::OFF</constant>(padrão)</member>
        <member><constant>Collator::ON</constant></member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
       </simplelist>
@@ -220,20 +217,20 @@
     </term>
     <listitem>
      <para>
-      The ICU Collation Service supports many levels of comparison (named
-      "Levels", but also known as "Strengths"). Having these categories
-      enables ICU to sort strings precisely according to local conventions.
-      However, by allowing the levels to be selectively employed, searching
-      for a string in text can be performed with various matching conditions.
-      For more detailed information, see
-      <function>collator_set_strength</function> chapter.
+      O Serviço de Colação ICU suporta muitos níveis de comparação (chamados
+      de "Levels", mas também conhecidos como "Strengths"). Usar essas categorias
+      faz com que o ICU ordene as strings precisamente, de acordo com as convenções locais.
+      Entretanto, permitir que os níveis sejam empregados seletivamente, pesquisando
+      por uma string no texto, pode ser realizado com várias condições de comparação.
+      Para informações mais detalhadas veja
+      o capítulo sobre <function>collator_set_strength</function>.
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
        <member><constant>Collator::PRIMARY</constant></member>
        <member><constant>Collator::SECONDARY</constant></member>
-       <member><constant>Collator::TERTIARY</constant>(default)</member>
+       <member><constant>Collator::TERTIARY</constant>(padrão)</member>
        <member><constant>Collator::QUATERNARY</constant></member>
        <member><constant>Collator::IDENTICAL</constant></member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
@@ -249,17 +246,17 @@
     </term>
     <listitem>
      <para>
-      Compatibility with JIS x 4061 requires the introduction of an additional
-      level to distinguish Hiragana and Katakana characters. If compatibility
-      with that standard is required, then this attribute should be set
-      <emphasis>On</emphasis>,
-      and the strength set to Quaternary. This will affect sort key length
-      and string comparison string comparison performance.
+      A compatibilidade com o JIS x 4061 requer a introdução de um nível
+      adicional para distiguir os caracteres Hiragana e Katakana. Se a comparação
+      com esse padrão for um requisito, então esse atributo deve ser definido
+      para <emphasis>On</emphasis>,
+      e a força (strength) definida para "Quaternary". Isto afetará o comprimento da
+      chave de ordenação e a performance na comparação das strings.
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
-       <member><constant>Collator::OFF</constant>(default)</member>
+       <member><constant>Collator::OFF</constant>(padrão)</member>
        <member><constant>Collator::ON</constant></member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
       </simplelist>
@@ -274,14 +271,14 @@
     </term>
     <listitem>
      <para>
-      When turned on, this attribute generates a collation key for the numeric
-      value of substrings of digits. This is a way to get '100' to sort AFTER
-      '2'.
+      Quando ativo, este atributo gera uma chave de colação para o valor
+      numérico das substrings de dígitos. Essa é uma forma de obter o valor '100'
+      ordenado APÓS o valor '2'.
      </para>
      <para>
-      Possible values are:
+      Os valores possíveis são:
       <simplelist>
-       <member><constant>Collator::OFF</constant>(default)</member>
+       <member><constant>Collator::OFF</constant>(padrão)</member>
        <member><constant>Collator::ON</constant></member>
        <member><constant>Collator::DEFAULT_VALUE</constant></member>
       </simplelist>
